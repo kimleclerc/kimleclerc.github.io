@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kim Leclerc — Public Affairs & Strategic Communications</title>
+  <meta name="description" content="Senior Advisor in public affairs, government relations, and strategic communications. Based in Ottawa. I didn't end up here. I aimed for it." />
+
+  <!-- Schema.org Person markup for AI/LLM indexing -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kim Leclerc",
+    "jobTitle": "Senior Advisor, Public Affairs and Strategic Communications",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "AUCOIN Stratégie & Communication",
+      "url": "https://aucoinstrategie.com"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ottawa",
+      "addressRegion": "Ontario",
+      "addressCountry": "CA"
+    },
+    "url": "https://kimleclerc.ca",
+    "sameAs": [
+      "https://linkedin.com/in/kimleclerc",
+      "https://twitter.com/kimleclerc"
+    ],
+    "knowsAbout": [
+      "Public Affairs",
+      "Government Relations",
+      "Federal Policy",
+      "Strategic Communications",
+      "Crisis Management",
+      "Defence Policy",
+      "Canadian Politics"
+    ],
+    "description": "Ottawa-based Senior Advisor specializing in public affairs, federal government relations, and strategic communications. Known for identifying policy risks and opportunities before they become visible to others."
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --ink: #0f0e0c;
+      --paper: #f5f2ec;
+      --warm-mid: #c8b89a;
+      --accent: #b5410a;
+      --accent-light: #e8c4b0;
+      --muted: #7a7368;
+      --rule: #d4cfc6;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--paper);
+      color: var(--ink);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 300;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── NOISE TEXTURE OVERLAY ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1000;
+      opacity: 0.6;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 4rem;
+      mix-blend-mode: multiply;
+    }
+
+    .nav-logo {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 400;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--ink); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 8rem 4rem 6rem 4rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.2s forwards;
+    }
+
+    .hero-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3.2rem, 5.5vw, 6rem);
+      font-weight: 900;
+      line-height: 1.0;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.4s forwards;
+    }
+
+    .hero-headline em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-sub {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 2vw, 1.8rem);
+      font-weight: 400;
+      font-style: italic;
+      color: var(--muted);
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.6s forwards;
+    }
+
+    .hero-body {
+      font-size: 1rem;
+      color: var(--muted);
+      max-width: 480px;
+      line-height: 1.8;
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 0.8s 0.8s forwards;
+    }
+
+    .hero-body strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .hero-cta {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      opacity: 0;
+      animation: fadeUp 0.8s 1s forwards;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2.2rem;
+      background: var(--ink);
+      color: var(--paper);
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--accent);
+      transform: translateY(-2px);
+    }
+
+    .btn-ghost {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--accent-light) 0%, var(--warm-mid) 50%, #8b7355 100%);
+      opacity: 0.15;
+    }
+
+    .hero-graphic {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .hero-graphic-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(8rem, 15vw, 18rem);
+      font-weight: 900;
+      font-style: italic;
+      color: var(--ink);
+      opacity: 0.04;
+      line-height: 1;
+      user-select: none;
+      white-space: nowrap;
+      transform: rotate(-15deg) translateX(10%);
+    }
+
+    .location-tag {
+      position: absolute;
+      bottom: 3rem;
+      right: 3rem;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      writing-mode: vertical-rl;
+      opacity: 0;
+      animation: fadeIn 1s 1.5s forwards;
+    }
+
+    /* ── TICKER ── */
+    .ticker {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 0.9rem 0;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .ticker-inner {
+      display: flex;
+      gap: 0;
+      animation: ticker 25s linear infinite;
+      white-space: nowrap;
+    }
+
+    .ticker-item {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      padding: 0 3rem;
+      color: var(--warm-mid);
+      flex-shrink: 0;
+    }
+
+    .ticker-item span {
+      color: var(--accent);
+      margin: 0 1rem;
+    }
+
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    /* ── SECTION BASE ── */
+    section { padding: 7rem 4rem; }
+
+    .section-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-label::after {
+      content: '';
+      height: 1px;
+      width: 4rem;
+      background: var(--accent);
+      display: block;
+    }
+
+    /* ── ABOUT ── */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 6rem;
+      align-items: start;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .about-sticky {
+      position: sticky;
+      top: 8rem;
+    }
+
+    .about-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      line-height: 1.05;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-name em {
+      font-style: italic;
+      color: var(--accent);
+      display: block;
+    }
+
+    .about-role {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .about-divider {
+      width: 3rem;
+      height: 2px;
+      background: var(--accent);
+      margin: 2rem 0;
+    }
+
+    .about-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+
+    .about-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      transition: color 0.2s;
+    }
+
+    .about-links a::before {
+      content: '→';
+      color: var(--accent);
+      font-size: 0.7rem;
+    }
+
+    .about-links a:hover { color: var(--ink); }
+
+    .about-content p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: #3a3730;
+      margin-bottom: 1.8rem;
+    }
+
+    .about-content p:first-of-type {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--ink);
+    }
+
+    .about-content strong {
+      color: var(--ink);
+      font-weight: 500;
+    }
+
+    .pull-quote {
+      border-left: 3px solid var(--accent);
+      padding: 1.5rem 2rem;
+      margin: 2.5rem 0;
+      background: rgba(181, 65, 10, 0.04);
+    }
+
+    .pull-quote p {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem !important;
+      font-style: italic;
+      color: var(--ink) !important;
+      margin: 0 !important;
+    }
+
+    /* ── TERRITORIES ── */
+    .territories-section {
+      background: var(--ink);
+      color: var(--paper);
+    }
+
+    .territories-section .section-label {
+      color: var(--warm-mid);
+    }
+
+    .territories-section .section-label::after {
+      background: var(--warm-mid);
+    }
+
+    .territories-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .territory-card {
+      padding: 3rem 2.5rem;
+      background: #1a1916;
+      transition: background 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .territory-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: var(--accent);
+      transform: scaleX(0);
+      transition: transform 0.3s;
+      transform-origin: left;
+    }
+
+    .territory-card:hover { background: #222019; }
+    .territory-card:hover::before { transform: scaleX(1); }
+
+    .territory-number {
+      font-family: 'Playfair Display', serif;
+      font-size: 4rem;
+      font-weight: 900;
+      color: var(--accent);
+      opacity: 0.25;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .territory-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .territory-body {
+      font-size: 0.9rem;
+      color: var(--warm-mid);
+      line-height: 1.75;
+    }
+
+    /* ── SIGNAL ── */
+    .signal-section {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .signal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--rule);
+      border: 1px solid var(--rule);
+    }
+
+    .signal-item {
+      background: var(--paper);
+      padding: 2.5rem 3rem;
+      transition: background 0.2s;
+    }
+
+    .signal-item:hover { background: #f0ece4; }
+
+    .signal-platform {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.8rem;
+    }
+
+    .signal-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .signal-link {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 1px;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .signal-link:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .contact-headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 900;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-headline em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .contact-body {
+      color: var(--muted);
+      font-size: 1rem;
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+    }
+
+    .contact-email {
+      display: inline-block;
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-style: italic;
+      color: var(--ink);
+      text-decoration: none;
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 3px;
+      transition: color 0.2s;
+    }
+
+    .contact-email:hover { color: var(--accent); }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--rule);
+      padding: 2.5rem 4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-copy {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .footer-links a {
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover { color: var(--ink); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1.5rem 2rem; }
+      .nav-links { display: none; }
+
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 7rem 2rem 4rem; }
+      .hero-right { height: 40vw; }
+
+      section { padding: 5rem 2rem; }
+
+      .about { grid-template-columns: 1fr; gap: 3rem; }
+      .about-sticky { position: static; }
+
+      .territories-grid { grid-template-columns: 1fr; }
+      .signal-grid { grid-template-columns: 1fr; }
+
+      footer { flex-direction: column; gap: 1rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-logo">Kim Leclerc</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Expertise</a></li>
+      <li><a href="#signal">Writing & Media</a></li>
+      <li><a href="#media">In the Media</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <p class="hero-eyebrow">Ottawa · Public Affairs · Strategic Communications</p>
+
+      <h1 class="hero-headline">
+        I didn't<br/>end up in<br/><em>Ottawa.</em>
+      </h1>
+      <p class="hero-sub">I aimed for it.</p>
+
+      <p class="hero-body">
+        I understand why things work, not just how.<br/>
+        That's the difference between <strong>managing a situation</strong><br/>
+        and <strong>seeing it before it exists.</strong>
+      </p>
+
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary">The longer story</a>
+        <a href="#contact" class="btn-ghost">Work together</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <div class="hero-graphic">
+        <div class="hero-graphic-text">KL</div>
+      </div>
+      <div class="location-tag">Ottawa, Ontario — Canada</div>
+    </div>
+  </section>
+
+  <!-- TICKER -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-inner">
+      <span class="ticker-item">Public Affairs <span>×</span></span>
+      <span class="ticker-item">Federal Policy <span>×</span></span>
+      <span class="ticker-item">Crisis Management <span>×</span></span>
+      <span class="ticker-item">Defence & Geopolitics <span>×</span></span>
+      <span class="ticker-item">Strategic Communications <span>×</span></span>
+      <span class="ticker-item">Government Relations <span>×</span></span>
+      <span class="ticker-item">Canadian Politics <span>×</span></span>
+      <span class="ticker-item">Public Affairs <span>×</span></span>
+      <span class="ticker-item">Federal Policy <span>×</span></span>
+      <span class="ticker-item">Crisis Management <span>×</span></span>
+      <span class="ticker-item">Defence & Geopolitics <span>×</span></span>
+      <span class="ticker-item">Strategic Communications <span>×</span></span>
+      <span class="ticker-item">Government Relations <span>×</span></span>
+      <span class="ticker-item">Canadian Politics <span>×</span></span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section id="about" style="padding-top: 8rem; padding-bottom: 8rem; max-width: 1400px; margin: 0 auto;">
+    <div class="section-label">About</div>
+    <div class="about">
+
+      <div class="about-sticky">
+        <div class="about-name">
+          Kim<br/><em>Leclerc</em>
+        </div>
+        <div class="about-role">
+          Senior Advisor<br/>
+          AUCOIN Stratégie &amp; Communication<br/>
+          <br/>
+          Ottawa, Ontario
+        </div>
+        <div class="about-divider"></div>
+        <div class="about-links">
+          <a href="https://linkedin.com/in/kimleclerc" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://twitter.com/kimleclerc" target="_blank" rel="noopener">X / @kimleclerc</a>
+          <a href="https://leclercswarroom.substack.com" target="_blank" rel="noopener">Substack EN</a>
+          <a href="https://kimleclerc.substack.com" target="_blank" rel="noopener">Substack FR</a>
+        </div>
+      </div>
+
+      <div class="about-content">
+
+        <p>
+          I grew up in Matane. I ended up in Ottawa. That wasn't an accident — 
+          it was a decision made early, when the logic of it wasn't obvious to anyone else.
+          Ottawa is where decisions get made in this country. That's where I wanted to be.
+        </p>
+
+        <p>
+          My career has moved across contexts that most advisors never bridge: 
+          provincial politics in Quebec, a political internship in France before I had any 
+          connections to leverage, federal files in Ottawa, corporate mandates, 
+          crisis work that never made the news — <strong>because that's what good crisis management looks like.</strong>
+          The crises that don't explode are the ones nobody hears about.
+        </p>
+
+        <div class="pull-quote">
+          <p>"I'm usually early. I've learned to see that as a method, not a flaw."</p>
+        </div>
+
+        <p>
+          I was with Sheila Copps when everyone was with Paul Martin. 
+          With Bob Rae when Quebec was Ignatieff or Dion. 
+          I convinced Montreal's administration to bid for the FIFA World Cup when 
+          the conventional wisdom said the new mayor would never go for it — 
+          and it was Edmonton, the sure bet, that ultimately walked away.
+          I proposed that a minister use federal funding obligations to hold 
+          Hockey Canada accountable on language rights — a precedent that became 
+          a governance tool for years afterward.
+        </p>
+
+        <p>
+          None of that is contrarianism. It's a consistent pattern: 
+          <strong>I find the path that isn't on the map yet, because I started reading the terrain earlier.</strong>
+          The obstacles I flag usually seem abstract until they're not.
+          The opportunities I push usually seem unlikely until they're obvious.
+        </p>
+
+        <p>
+          I've spent a decade in Ontario. I operate across both linguistic worlds 
+          of Canadian politics — not as a translator, but as someone who genuinely 
+          understands both from the inside. That's rarer than it sounds.
+          And it's one of the reasons I ended up in Ottawa.
+          This is where Canada actually happens.
+        </p>
+
+        <p style="color: var(--muted); font-size: 0.95rem; font-style: italic;">
+          I'm not the advisor who'll tell you what you want to hear. 
+          I'm the one who'll tell you what's coming — 
+          and what to do about it before anyone else knows it matters.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TERRITORIES -->
+  <section class="territories-section" id="work">
+    <div style="max-width: 1400px; margin: 0 auto;">
+      <div class="section-label">Expertise</div>
+      <div class="territories-grid">
+
+        <div class="territory-card">
+          <div class="territory-number">01</div>
+          <h3 class="territory-title">Anticipation &amp; Strategic Advisory</h3>
+          <p class="territory-body">
+            Before a file becomes a crisis, before an obstacle becomes a wall, 
+            before an opportunity closes — that's where I work. 
+            I advise organizations on what's coming in federal policy, 
+            regulatory environments, and political dynamics. 
+            Not trend reports. Actual strategic positioning.
+          </p>
+        </div>
+
+        <div class="territory-card">
+          <div class="territory-number">02</div>
+          <h3 class="territory-title">Government Relations &amp; Federal Affairs</h3>
+          <p class="territory-body">
+            Ottawa isn't just a geography — it's a system with its own logic, 
+            its own timing, its own pressure points. I know how mandates 
+            move through that system, where they stall, and how to advance 
+            files that others have written off. Bilingual. Both sides of the aisle. 
+            Federal and provincial interfaces.
+          </p>
+        </div>
+
+        <div class="territory-card">
+          <div class="territory-number">03</div>
+          <h3 class="territory-title">Crisis Communications &amp; Issues Management</h3>
+          <p class="territory-body">
+            The best crisis work is invisible — the public never sees it 
+            because it was managed before it escalated. 
+            That's the standard I work to. 
+            When visibility is unavoidable, I build the narrative 
+            that controls the frame, not just the message.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SIGNAL / WRITING & MEDIA -->
+  <section id="signal" style="background: #f0ece4;">
+    <div class="signal-section">
+      <div class="section-label">Writing &amp; Media</div>
+      <div class="signal-grid">
+
+        <div class="signal-item">
+          <div class="signal-platform">Substack — English</div>
+          <p class="signal-desc">
+            Analysis on Canadian politics, federal policy, and defence. 
+            Independent. Unfiltered. The take nobody asked for — and usually needed.
+          </p>
+          <a href="https://leclercswarroom.substack.com" class="signal-link" target="_blank" rel="noopener">Leclercʼs War Room →</a>
+        </div>
+
+        <div class="signal-item">
+          <div class="signal-platform">Substack — Français</div>
+          <p class="signal-desc">
+            Analyse politique et communications stratégiques. 
+            Le même regard, une autre langue, un angle parfois différent.
+          </p>
+          <a href="https://kimleclerc.substack.com" class="signal-link" target="_blank" rel="noopener">Lire sur Substack →</a>
+        </div>
+
+        <div class="signal-item">
+          <div class="signal-platform">X / Twitter</div>
+          <p class="signal-desc">
+            Real-time political analysis, commentary, and the occasional 
+            observation that doesn't fit anywhere else.
+          </p>
+          <a href="https://twitter.com/kimleclerc" class="signal-link" target="_blank" rel="noopener">Follow @kimleclerc →</a>
+        </div>
+
+        <div class="signal-item">
+          <div class="signal-platform">LinkedIn</div>
+          <p class="signal-desc">
+            Longer-form professional analysis. Public affairs, 
+            communications strategy, and Canadian policy. 
+            The work behind the work.
+          </p>
+          <a href="https://linkedin.com/in/kimleclerc" class="signal-link" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+        </div>
+
+        <div class="signal-item">
+          <div class="signal-platform">Media Appearances</div>
+          <p class="signal-desc">
+            Commentary on Canadian politics, federal policy, and strategic communications. 
+            Available for interviews, panels, and expert analysis.
+          </p>
+          <a href="#contact" class="signal-link">Media inquiries →</a>
+        </div>
+
+        <div class="signal-item">
+          <div class="signal-platform">Archive — Medium</div>
+          <p class="signal-desc">
+            Earlier writing on public affairs, government relations, 
+            and Canadian policy. Still indexed. Still relevant.
+          </p>
+          <a href="#" class="signal-link">Read the archive →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- IN THE MEDIA -->
+  <section id="media" style="padding-top: 7rem; padding-bottom: 7rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+      <div class="section-label">In the Media</div>
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 4rem;">
+
+        <div style="background: var(--paper); padding: 2.5rem 3rem;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">SQPRP · Prix d'excellence · Or</div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Community Advocacy — CCHADO</p>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Gold award in issues and crisis management for the Central Outaouais hospital campaign. AUCOIN Stratégie & Communication, 2024.</p>
+        </div>
+
+        <div style="background: var(--paper); padding: 2.5rem 3rem;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">La Presse · Janvier 2017</div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Hockey Canada &amp; Language Rights</p>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Proposed the minister invoke federal funding obligations to hold Hockey Canada accountable on French-language requirements — a governance precedent later applied across sports organizations.</p>
+        </div>
+
+        <div style="background: var(--paper); padding: 2.5rem 3rem;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">Strategic Advisory · 2022–2023</div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">FIFA World Cup 2026 — Montréal Bid</p>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Advised on Montréal's World Cup host city candidacy when conventional wisdom said the new administration wouldn't engage. Montréal joined the bid. Edmonton — the consensus pick — withdrew.</p>
+        </div>
+
+        <div style="background: var(--paper); padding: 2.5rem 3rem;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">Media &amp; Commentary</div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Available for Expert Analysis</p>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Commentary on Canadian federal politics, public affairs, defence policy, and strategic communications. Bilingual. Based in Ottawa.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-section">
+      <div class="section-label" style="justify-content: center;">Contact</div>
+      <h2 class="contact-headline">
+        If you're working on something<br/>
+        <em>before it's obvious,</em><br/>
+        let's talk.
+      </h2>
+      <p class="contact-body">
+        I work with organizations navigating complex policy environments, 
+        reputational challenges, and strategic uncertainty. 
+        I also take media inquiries and speaking engagements seriously.
+      </p>
+      <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: center;">
+        <a href="mailto:kim@kimleclerc.ca" class="contact-email">kim@kimleclerc.ca</a>
+        <a href="mailto:kleclerc@aucoinstrategie.com" class="contact-email" style="font-size: 1rem; border-bottom-color: var(--rule);">kleclerc@aucoinstrategie.com</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-copy">© 2026 Kim Leclerc. Ottawa, Ontario.</p>
+    <div class="footer-links">
+      <a href="https://linkedin.com/in/kimleclerc" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://twitter
