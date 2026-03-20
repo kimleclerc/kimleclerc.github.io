@@ -1,0 +1,51 @@
+# =============================================
+# robots.txt — Kim Leclerc
+# Optimisé SEO + Visibilité maximale LLM / IA (2026)
+# Site : https://kimleclerc.ca/
+# Dernière mise à jour : mars 2026
+# =============================================
+
+# === Autorisation générale ===
+User-agent: *
+Allow: /
+
+# === Crawlers IA & LLM — Explicitement bienvenus (pour booster ta visibilité et tes citations) ===
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GrokBot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# === Moteurs de recherche principaux (SEO) ===
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+# === Sitemap (pour accélérer l’indexation) ===
+Sitemap: https://kimleclerc.ca/sitemap.xml
