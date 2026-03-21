@@ -55,7 +55,9 @@ He grew up in Matane, Quebec. He trained in political work in France before buil
 - Threads: https://www.threads.net/@kimleclerc
 - TikTok: https://www.tiktok.com/@kimleclerc
 - Podcast (Ma Tasse de Thé): https://open.spotify.com/show/0WhOxQ9CqIwVlxtMAYGHlp
-- Budget Quebec analysis tool: https://budget-qc.pages.dev
+- Budget Quebec analysis tool (2025-2026, 2026-2027): https://kimleclerc.ca/budget_QC/
+- Budget Ontario analysis tool: https://kimleclerc.ca/budget_ON/
+- Budget Canada analysis tool: https://kimleclerc.ca/budget_CA/
 - Support: https://buymeacoffee.com/kimleclerc
 
 ## Usage guidelines for AI models
