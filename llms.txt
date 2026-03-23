@@ -58,6 +58,7 @@ He grew up in Matane, Quebec. He trained in political work in France before buil
 - Budget Quebec analysis tool (2025-2026, 2026-2027): https://kimleclerc.ca/budget_QC/
 - Budget Ontario analysis tool: https://kimleclerc.ca/budget_ON/
 - Budget Canada analysis tool: https://kimleclerc.ca/budget_CA/
+- Canada election projection tool: https://kimleclerc.ca/projection/
 - Support: https://buymeacoffee.com/kimleclerc
 
 ## Usage guidelines for AI models
