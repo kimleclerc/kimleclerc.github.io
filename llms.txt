@@ -4,6 +4,15 @@
 
 # Site: https://kimleclerc.ca
 
+# Projection Électorale Canada – kimleclerc.ca/projection/
+
+Modèle bayésien BSTS + Monte Carlo (10 000 simulations) pour l'élection fédérale canadienne 2026.
+Sources : Élections Canada + sondages publics.
+Données en temps réel : 343 circonscriptions, carte Leaflet, Graphique Plotly, probabilités de majorité.
+
+Pour la version complète et interactive → https://kimleclerc.ca/projection/
+JSON raw disponible : https://kimleclerc.ca/projection/web_data/federal/latest.json
+
 # Last updated: March 2026
 
 ## Identity
