@@ -1,16 +1,31 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kim Leclerc — Public Affairs & Strategic Communications</title>
+  <title>Kim Leclerc — Public Affairs &amp; Strategic Communications</title>
   <meta name="description" content="Senior Advisor in public affairs, government relations, and strategic communications. Based in Ottawa. I didn't end up here. I aimed for it." />
+  <link rel="canonical" href="https://kimleclerc.ca/" />
   <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
   <meta name="robots" content="index, follow" />
 
-  <!-- Schema.org Person markup for AI/LLM indexing -->
+  <!-- Open Graph / Social previews -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kimleclerc.ca/" />
+  <meta property="og:title" content="Kim Leclerc — Public Affairs &amp; Strategic Communications" />
+  <meta property="og:description" content="Senior Advisor in public affairs, government relations, and strategic communications. Based in Ottawa." />
+  <meta property="og:image" content="https://kimleclerc.ca/images/kim-leclerc.jpg" />
+  <meta property="og:locale" content="en_CA" />
+  <meta property="og:locale:alternate" content="fr_CA" />
 
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@kimleclerc" />
+  <meta name="twitter:title" content="Kim Leclerc — Public Affairs &amp; Strategic Communications" />
+  <meta name="twitter:description" content="Senior Advisor in public affairs, government relations, and strategic communications. Based in Ottawa." />
+  <meta name="twitter:image" content="https://kimleclerc.ca/images/kim-leclerc.jpg" />
+
+  <!-- Schema.org Person markup for AI/LLM indexing -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,6 +44,7 @@
       "addressCountry": "CA"
     },
     "url": "https://kimleclerc.ca",
+    "image": "https://kimleclerc.ca/images/kim-leclerc.jpg",
     "sameAs": [
       "https://linkedin.com/in/kimleclerc",
       "https://vote-scope.com",
@@ -64,7 +80,8 @@
       "Strategic Communications",
       "Crisis Management",
       "Defence Policy",
-      "Canadian Politics"
+      "Canadian Politics",
+      "Electoral Projections"
     ],
     "description": "Ottawa-based Senior Advisor specializing in public affairs, federal government relations, and strategic communications. Known for identifying policy risks and opportunities before they become visible to others."
   }
@@ -262,6 +279,7 @@
 
     .btn-ghost:hover { color: var(--ink); border-color: var(--ink); }
 
+    /* ── HERO RIGHT / PHOTO ── */
     .hero-right {
       position: relative;
       overflow: hidden;
@@ -273,6 +291,21 @@
       inset: 0;
       background: linear-gradient(135deg, var(--accent-light) 0%, var(--warm-mid) 50%, #8b7355 100%);
       opacity: 0.15;
+      z-index: 1;
+    }
+
+    .hero-photo {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: grayscale(20%) contrast(1.05);
     }
 
     .hero-graphic {
@@ -282,6 +315,7 @@
       align-items: center;
       justify-content: center;
       overflow: hidden;
+      z-index: 0;
     }
 
     .hero-graphic-text {
@@ -309,6 +343,7 @@
       writing-mode: vertical-rl;
       opacity: 0;
       animation: fadeIn 1s 1.5s forwards;
+      z-index: 2;
     }
 
     /* ── TICKER ── */
@@ -375,44 +410,40 @@
       display: grid;
       grid-template-columns: 1fr 1.6fr;
       gap: 6rem;
-      align-items: start;
-      max-width: 1200px;
-      margin: 0 auto;
     }
 
     .about-sticky {
       position: sticky;
       top: 8rem;
+      align-self: start;
     }
 
     .about-name {
       font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
+      font-size: clamp(2.5rem, 4vw, 3.5rem);
       font-weight: 900;
-      line-height: 1.05;
+      line-height: 1.0;
       margin-bottom: 1.5rem;
     }
 
     .about-name em {
       font-style: italic;
       color: var(--accent);
-      display: block;
     }
 
     .about-role {
       font-family: 'DM Mono', monospace;
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
       color: var(--muted);
-      line-height: 1.8;
+      line-height: 1.9;
+      margin-bottom: 2rem;
     }
 
     .about-divider {
-      width: 3rem;
-      height: 2px;
-      background: var(--accent);
-      margin: 2rem 0;
+      height: 1px;
+      background: var(--rule);
+      margin-bottom: 2rem;
     }
 
     .about-links {
@@ -427,126 +458,79 @@
       letter-spacing: 0.1em;
       color: var(--muted);
       text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
       transition: color 0.2s;
     }
 
-    .about-links a::before {
-      content: '→';
-      color: var(--accent);
-      font-size: 0.7rem;
-    }
-
-    .about-links a:hover { color: var(--ink); }
+    .about-links a:hover { color: var(--accent); }
 
     .about-content p {
+      margin-bottom: 1.8rem;
       font-size: 1.05rem;
       line-height: 1.85;
-      color: #3a3730;
-      margin-bottom: 1.8rem;
-    }
-
-    .about-content p:first-of-type {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.4rem;
-      font-weight: 400;
-      line-height: 1.6;
-      color: var(--ink);
-    }
-
-    .about-content strong {
-      color: var(--ink);
-      font-weight: 500;
     }
 
     .pull-quote {
       border-left: 3px solid var(--accent);
       padding: 1.5rem 2rem;
       margin: 2.5rem 0;
-      background: rgba(181, 65, 10, 0.04);
+      background: rgba(181, 65, 10, 0.03);
     }
 
     .pull-quote p {
       font-family: 'Playfair Display', serif;
-      font-size: 1.25rem !important;
+      font-size: 1.3rem;
       font-style: italic;
-      color: var(--ink) !important;
-      margin: 0 !important;
+      color: var(--ink);
+      margin-bottom: 0 !important;
     }
 
-    /* ── TERRITORIES ── */
+    /* ── TERRITORIES / EXPERTISE ── */
     .territories-section {
       background: var(--ink);
       color: var(--paper);
     }
 
-    .territories-section .section-label {
-      color: var(--warm-mid);
-    }
-
-    .territories-section .section-label::after {
-      background: var(--warm-mid);
-    }
-
     .territories-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 3px;
-      max-width: 1200px;
-      margin: 0 auto;
+      gap: 1px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.1);
+      margin-top: 1rem;
     }
 
     .territory-card {
       padding: 3rem 2.5rem;
-      background: #1a1916;
-      transition: background 0.3s;
-      position: relative;
-      overflow: hidden;
+      background: var(--ink);
+      transition: background 0.2s;
     }
 
-    .territory-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: var(--accent);
-      transform: scaleX(0);
-      transition: transform 0.3s;
-      transform-origin: left;
-    }
-
-    .territory-card:hover { background: #222019; }
-    .territory-card:hover::before { transform: scaleX(1); }
+    .territory-card:hover { background: #1a1916; }
 
     .territory-number {
-      font-family: 'Playfair Display', serif;
-      font-size: 4rem;
-      font-weight: 900;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
       color: var(--accent);
-      opacity: 0.25;
-      line-height: 1;
       margin-bottom: 1.5rem;
     }
 
     .territory-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: 700;
-      margin-bottom: 1rem;
-      line-height: 1.2;
+      line-height: 1.3;
+      margin-bottom: 1.2rem;
+      color: var(--paper);
     }
 
     .territory-body {
       font-size: 0.9rem;
-      color: var(--warm-mid);
+      color: rgba(245, 242, 236, 0.65);
       line-height: 1.75;
     }
 
-    /* ── SIGNAL ── */
+    /* ── SIGNAL / WRITING & MEDIA ── */
     .signal-section {
       max-width: 1200px;
       margin: 0 auto;
@@ -575,6 +559,14 @@
       text-transform: uppercase;
       color: var(--accent);
       margin-bottom: 0.8rem;
+    }
+
+    .signal-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
     }
 
     .signal-desc {
@@ -689,7 +681,7 @@
 
       .hero { grid-template-columns: 1fr; min-height: auto; }
       .hero-left { padding: 7rem 2rem 4rem; }
-      .hero-right { height: 40vw; }
+      .hero-right { height: 60vw; }
 
       section { padding: 5rem 2rem; }
 
@@ -702,379 +694,371 @@
       footer { flex-direction: column; gap: 1rem; text-align: center; }
     }
   </style>
-
 </head>
 <body>
 
   <!-- NAV -->
-
   <nav>
     <a href="#" class="nav-logo">Kim Leclerc</a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#work">Expertise</a></li>
-      <li><a href="#signal">Writing & Media</a></li>
+      <li><a href="#signal">Writing &amp; Media</a></li>
       <li><a href="#media">In the Media</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
   <!-- HERO -->
-
   <section class="hero" id="home">
     <div class="hero-left">
       <p class="hero-eyebrow">Ottawa · Public Affairs · Strategic Communications</p>
 
-```
-  <h1 class="hero-headline">
-    I didn't<br/>end up in<br/><em>Ottawa.</em>
-  </h1>
-  <p class="hero-sub">I aimed for it.</p>
+      <h1 class="hero-headline">
+        I didn't<br/>end up in<br/><em>Ottawa.</em>
+      </h1>
+      <p class="hero-sub">I aimed for it.</p>
 
-  <p class="hero-body">
-    I understand why things work, not just how.<br/>
-    That's the difference between <strong>managing a situation</strong><br/>
-    and <strong>seeing it before it exists.</strong>
-  </p>
+      <p class="hero-body">
+        I understand why things work, not just how.<br/>
+        That's the difference between <strong>managing a situation</strong><br/>
+        and <strong>seeing it before it exists.</strong>
+      </p>
 
-  <div class="hero-cta">
-    <a href="#about" class="btn-primary">The longer story</a>
-    <a href="#contact" class="btn-ghost">Work together</a>
-  </div>
-</div>
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary">The longer story</a>
+        <a href="#contact" class="btn-ghost">Work together</a>
+      </div>
+    </div>
 
-<div class="hero-right">
-  <div class="hero-graphic">
-    <div class="hero-graphic-text">KL</div>
-  </div>
-  <div class="location-tag">Ottawa, Ontario — Canada</div>
-</div>
-```
-
+    <div class="hero-right">
+      <!-- Photo: place your headshot at images/kim-leclerc.jpg -->
+      <div class="hero-photo">
+        <img src="images/kim-leclerc.jpg" alt="Kim Leclerc — Senior Advisor, Ottawa"
+             onerror="this.parentElement.style.display='none'" />
+      </div>
+      <div class="hero-graphic">
+        <div class="hero-graphic-text">KL</div>
+      </div>
+      <div class="location-tag">Ottawa, Ontario — Canada</div>
+    </div>
   </section>
 
   <!-- TICKER -->
-
   <div class="ticker" aria-hidden="true">
     <div class="ticker-inner">
       <span class="ticker-item">Public Affairs <span>×</span></span>
       <span class="ticker-item">Federal Policy <span>×</span></span>
       <span class="ticker-item">Crisis Management <span>×</span></span>
-      <span class="ticker-item">Defence & Geopolitics <span>×</span></span>
+      <span class="ticker-item">Defence &amp; Geopolitics <span>×</span></span>
       <span class="ticker-item">Strategic Communications <span>×</span></span>
       <span class="ticker-item">Government Relations <span>×</span></span>
+      <span class="ticker-item">Electoral Projection <span>×</span></span>
       <span class="ticker-item">Canadian Politics <span>×</span></span>
       <span class="ticker-item">Public Affairs <span>×</span></span>
       <span class="ticker-item">Federal Policy <span>×</span></span>
       <span class="ticker-item">Crisis Management <span>×</span></span>
-      <span class="ticker-item">Defence & Geopolitics <span>×</span></span>
+      <span class="ticker-item">Defence &amp; Geopolitics <span>×</span></span>
       <span class="ticker-item">Strategic Communications <span>×</span></span>
       <span class="ticker-item">Government Relations <span>×</span></span>
+      <span class="ticker-item">Electoral Projection <span>×</span></span>
       <span class="ticker-item">Canadian Politics <span>×</span></span>
     </div>
   </div>
 
   <!-- ABOUT -->
-
   <section id="about" style="padding-top: 8rem; padding-bottom: 8rem; max-width: 1400px; margin: 0 auto;">
     <div class="section-label">About</div>
     <div class="about">
 
-```
-  <div class="about-sticky">
-    <div class="about-name">
-      Kim<br/><em>Leclerc</em>
+      <div class="about-sticky">
+        <div class="about-name">
+          Kim<br/><em>Leclerc</em>
+        </div>
+        <div class="about-role">
+          Senior Advisor<br/>
+          AUCOIN Stratégie &amp; Communication<br/>
+          <br/>
+          Ottawa, Ontario
+        </div>
+        <div class="about-divider"></div>
+        <div class="about-links">
+          <a href="https://linkedin.com/in/kimleclerc" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://twitter.com/kimleclerc" target="_blank" rel="noopener">X / @kimleclerc</a>
+          <a href="https://leclercswarroom.substack.com" target="_blank" rel="noopener">Substack EN</a>
+          <a href="https://kimleclerc.substack.com" target="_blank" rel="noopener">Substack FR</a>
+          <a href="https://vote-scope.com" target="_blank" rel="noopener">Vote-Scope.com</a>
+        </div>
+      </div>
+
+      <div class="about-content">
+
+        <p>
+          I grew up in Matane. I ended up in Ottawa. That wasn't an accident —
+          it was a decision made early, when the logic of it wasn't obvious to anyone else.
+          Ottawa is where decisions get made in this country. That's where I wanted to be.
+        </p>
+
+        <p>
+          My career has moved across contexts that most advisors never bridge:
+          provincial politics in Quebec, a political internship in France before I had any
+          connections to leverage, federal files in Ottawa, corporate mandates,
+          crisis work that never made the news — <strong>because that's what good crisis management looks like.</strong>
+          The crises that don't explode are the ones nobody hears about.
+        </p>
+
+        <div class="pull-quote">
+          <p>"I'm usually early. I've learned to see that as a method, not a flaw."</p>
+        </div>
+
+        <p>
+          I was with Sheila Copps when everyone was with Paul Martin.
+          With Bob Rae when Quebec was Ignatieff or Dion.
+          I convinced Montreal's administration to bid for the FIFA World Cup when
+          the conventional wisdom said the new mayor would never go for it —
+          and it was Edmonton, the sure bet, that ultimately walked away.
+          I proposed that a minister use federal funding obligations to hold
+          Hockey Canada accountable on language rights — a precedent that became
+          a governance tool for years afterward.
+        </p>
+
+        <p>
+          None of that is contrarianism. It's a consistent pattern:
+          <strong>I find the path that isn't on the map yet, because I started reading the terrain earlier.</strong>
+          The obstacles I flag usually seem abstract until they're not.
+          The opportunities I push usually seem unlikely until they're obvious.
+        </p>
+
+        <p>
+          I've spent a decade in Ontario. I operate across both linguistic worlds
+          of Canadian politics — not as a translator, but as someone who genuinely
+          understands both from the inside. That's rarer than it sounds.
+          And it's one of the reasons I ended up in Ottawa.
+          This is where Canada actually happens.
+        </p>
+
+        <p style="color: var(--muted); font-size: 0.95rem; font-style: italic;">
+          I'm not the advisor who'll tell you what you want to hear.
+          I'm the one who'll tell you what's coming —
+          and what to do about it before anyone else knows it matters.
+        </p>
+
+      </div>
     </div>
-    <div class="about-role">
-      Senior Advisor<br/>
-      AUCOIN Stratégie &amp; Communication<br/>
-      <br/>
-      Ottawa, Ontario
-    </div>
-    <div class="about-divider"></div>
-    <div class="about-links">
-      <a href="https://linkedin.com/in/kimleclerc" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://twitter.com/kimleclerc" target="_blank" rel="noopener">X / @kimleclerc</a>
-      <a href="https://leclercswarroom.substack.com" target="_blank" rel="noopener">Substack EN</a>
-      <a href="https://kimleclerc.substack.com" target="_blank" rel="noopener">Substack FR</a>
-    </div>
-  </div>
-
-  <div class="about-content">
-
-    <p>
-      I grew up in Matane. I ended up in Ottawa. That wasn't an accident — 
-      it was a decision made early, when the logic of it wasn't obvious to anyone else.
-      Ottawa is where decisions get made in this country. That's where I wanted to be.
-    </p>
-
-    <p>
-      My career has moved across contexts that most advisors never bridge: 
-      provincial politics in Quebec, a political internship in France before I had any 
-      connections to leverage, federal files in Ottawa, corporate mandates, 
-      crisis work that never made the news — <strong>because that's what good crisis management looks like.</strong>
-      The crises that don't explode are the ones nobody hears about.
-    </p>
-
-    <div class="pull-quote">
-      <p>"I'm usually early. I've learned to see that as a method, not a flaw."</p>
-    </div>
-
-    <p>
-      I was with Sheila Copps when everyone was with Paul Martin. 
-      With Bob Rae when Quebec was Ignatieff or Dion. 
-      I convinced Montreal's administration to bid for the FIFA World Cup when 
-      the conventional wisdom said the new mayor would never go for it — 
-      and it was Edmonton, the sure bet, that ultimately walked away.
-      I proposed that a minister use federal funding obligations to hold 
-      Hockey Canada accountable on language rights — a precedent that became 
-      a governance tool for years afterward.
-    </p>
-
-    <p>
-      None of that is contrarianism. It's a consistent pattern: 
-      <strong>I find the path that isn't on the map yet, because I started reading the terrain earlier.</strong>
-      The obstacles I flag usually seem abstract until they're not.
-      The opportunities I push usually seem unlikely until they're obvious.
-    </p>
-
-    <p>
-      I've spent a decade in Ontario. I operate across both linguistic worlds 
-      of Canadian politics — not as a translator, but as someone who genuinely 
-      understands both from the inside. That's rarer than it sounds.
-      And it's one of the reasons I ended up in Ottawa.
-      This is where Canada actually happens.
-    </p>
-
-    <p style="color: var(--muted); font-size: 0.95rem; font-style: italic;">
-      I'm not the advisor who'll tell you what you want to hear. 
-      I'm the one who'll tell you what's coming — 
-      and what to do about it before anyone else knows it matters.
-    </p>
-
-  </div>
-</div>
-```
-
   </section>
 
-  <!-- TERRITORIES -->
-
+  <!-- TERRITORIES / EXPERTISE -->
   <section class="territories-section" id="work">
     <div style="max-width: 1400px; margin: 0 auto;">
-      <div class="section-label">Expertise</div>
+      <div class="section-label" style="color: var(--warm-mid);">
+        <span>Expertise</span>
+      </div>
       <div class="territories-grid">
 
-```
-    <div class="territory-card">
-      <div class="territory-number">01</div>
-      <h3 class="territory-title">Anticipation &amp; Strategic Advisory</h3>
-      <p class="territory-body">
-        Before a file becomes a crisis, before an obstacle becomes a wall, 
-        before an opportunity closes — that's where I work. 
-        I advise organizations on what's coming in federal policy, 
-        regulatory environments, and political dynamics. 
-        Not trend reports. Actual strategic positioning.
-      </p>
+        <div class="territory-card">
+          <div class="territory-number">01</div>
+          <h3 class="territory-title">Anticipation &amp; Strategic Advisory</h3>
+          <p class="territory-body">
+            Before a file becomes a crisis, before an obstacle becomes a wall,
+            before an opportunity closes — that's where I work.
+            I advise organizations on what's coming in federal policy,
+            regulatory environments, and political dynamics.
+            Not trend reports. Actual strategic positioning.
+          </p>
+        </div>
+
+        <div class="territory-card">
+          <div class="territory-number">02</div>
+          <h3 class="territory-title">Government Relations &amp; Federal Affairs</h3>
+          <p class="territory-body">
+            Ottawa isn't just a geography — it's a system with its own logic,
+            its own timing, its own pressure points. I know how mandates
+            move through that system, where they stall, and how to advance
+            files that others have written off. Bilingual. Both sides of the aisle.
+            Federal and provincial interfaces.
+          </p>
+        </div>
+
+        <div class="territory-card">
+          <div class="territory-number">03</div>
+          <h3 class="territory-title">Crisis Communications &amp; Issues Management</h3>
+          <p class="territory-body">
+            The best crisis work is invisible — the public never sees it
+            because it was managed before it escalated.
+            That's the standard I work to.
+            When visibility is unavoidable, I build the narrative
+            that controls the frame, not just the message.
+          </p>
+        </div>
+
+      </div>
     </div>
-
-    <div class="territory-card">
-      <div class="territory-number">02</div>
-      <h3 class="territory-title">Government Relations &amp; Federal Affairs</h3>
-      <p class="territory-body">
-        Ottawa isn't just a geography — it's a system with its own logic, 
-        its own timing, its own pressure points. I know how mandates 
-        move through that system, where they stall, and how to advance 
-        files that others have written off. Bilingual. Both sides of the aisle. 
-        Federal and provincial interfaces.
-      </p>
-    </div>
-
-    <div class="territory-card">
-      <div class="territory-number">03</div>
-      <h3 class="territory-title">Crisis Communications &amp; Issues Management</h3>
-      <p class="territory-body">
-        The best crisis work is invisible — the public never sees it 
-        because it was managed before it escalated. 
-        That's the standard I work to. 
-        When visibility is unavoidable, I build the narrative 
-        that controls the frame, not just the message.
-      </p>
-    </div>
-
-  </div>
-</div>
-```
-
   </section>
 
   <!-- SIGNAL / WRITING & MEDIA -->
-
   <section id="signal" style="background: #f0ece4;">
     <div class="signal-section">
       <div class="section-label">Writing &amp; Media</div>
       <div class="signal-grid">
 
-```
-    <div class="signal-item">
-      <div class="signal-platform">Substack — English</div>
-      <p class="signal-desc">
-        Analysis on Canadian politics, federal policy, and defence. 
-        Independent. Unfiltered. The take nobody asked for — and usually needed.
-      </p>
-      <a href="https://leclercswarroom.substack.com" class="signal-link" target="_blank" rel="noopener">Leclercʼs War Room →</a>
-    </div>
+        <div class="signal-item">
+          <div class="signal-platform">Substack — English</div>
+          <p class="signal-desc">
+            Analysis on Canadian politics, federal policy, and defence.
+            Independent. Unfiltered. The take nobody asked for — and usually needed.
+          </p>
+          <a href="https://leclercswarroom.substack.com" class="signal-link" target="_blank" rel="noopener">Leclerc's War Room →</a>
+        </div>
 
-    <div class="signal-item">
-      <div class="signal-platform">Substack — Français</div>
-      <p class="signal-desc">
-        Analyse politique et communications stratégiques. 
-        Le même regard, une autre langue, un angle parfois différent.
-      </p>
-      <a href="https://kimleclerc.substack.com" class="signal-link" target="_blank" rel="noopener">Lire sur Substack →</a>
-    </div>
+        <div class="signal-item">
+          <div class="signal-platform">Substack — Français</div>
+          <p class="signal-desc">
+            Analyse politique et communications stratégiques.
+            Le même regard, une autre langue, un angle parfois différent.
+          </p>
+          <a href="https://kimleclerc.substack.com" class="signal-link" target="_blank" rel="noopener">Lire sur Substack →</a>
+        </div>
 
-    <div class="signal-item">
-      <div class="signal-platform">X / Twitter</div>
-      <p class="signal-desc">
-        Real-time political analysis, commentary, and the occasional 
-        observation that doesn't fit anywhere else.
-      </p>
-      <a href="https://twitter.com/kimleclerc" class="signal-link" target="_blank" rel="noopener">Follow @kimleclerc →</a>
-    </div>
+        <div class="signal-item">
+          <div class="signal-platform">Vote-Scope — Electoral Projections</div>
+          <p class="signal-title">Vote-Scope.com</p>
+          <p class="signal-desc">
+            Independent electoral projection tool for Canadian federal and provincial elections.
+            Data-driven modelling, built and maintained independently.
+          </p>
+          <a href="https://vote-scope.com" class="signal-link" target="_blank" rel="noopener">Explore Vote-Scope →</a>
+        </div>
 
-    <div class="signal-item">
-      <div class="signal-platform">LinkedIn</div>
-      <p class="signal-desc">
-        Longer-form professional analysis. Public affairs, 
-        communications strategy, and Canadian policy. 
-        The work behind the work.
-      </p>
-      <a href="https://linkedin.com/in/kimleclerc" class="signal-link" target="_blank" rel="noopener">Connect on LinkedIn →</a>
-    </div>
+        <div class="signal-item">
+          <div class="signal-platform">Podcast — Ma Tasse de Thé</div>
+          <p class="signal-desc">
+            A conversation show hosted with Audrey Aubut.
+            Available on Apple Podcasts and Spotify.
+          </p>
+          <a href="https://open.spotify.com/show/0WhOxQ9CqIwVlxtMAYGHlp" class="signal-link" target="_blank" rel="noopener">Listen on Spotify →</a>
+        </div>
 
-    <div class="signal-item">
-      <div class="signal-platform">Media Appearances</div>
-      <p class="signal-desc">
-        Commentary on Canadian politics, federal policy, and strategic communications. 
-        Available for interviews, panels, and expert analysis.
-      </p>
-      <a href="#contact" class="signal-link">Media inquiries →</a>
-    </div>
+        <div class="signal-item">
+          <div class="signal-platform">YouTube</div>
+          <p class="signal-desc">
+            Video content on Canadian politics, public affairs,
+            and strategic analysis.
+          </p>
+          <a href="https://www.youtube.com/@KimLeclercOriginal" class="signal-link" target="_blank" rel="noopener">Watch on YouTube →</a>
+        </div>
 
-    <div class="signal-item">
-      <div class="signal-platform">Archive — Medium</div>
-      <p class="signal-desc">
-        Earlier writing on public affairs, government relations, 
-        and Canadian policy. Still indexed. Still relevant.
-      </p>
-      <a href="https://medium.com/@kimleclerc" class="signal-link" target="_blank" rel="noopener">Read the archive →</a>
-    </div>
+        <div class="signal-item">
+          <div class="signal-platform">X / Twitter</div>
+          <p class="signal-desc">
+            Real-time political analysis, commentary, and the occasional
+            observation that doesn't fit anywhere else.
+          </p>
+          <a href="https://twitter.com/kimleclerc" class="signal-link" target="_blank" rel="noopener">Follow @kimleclerc →</a>
+        </div>
 
-    <div class="signal-item">
-      <div class="signal-platform">Podcast — Ma Tasse de Thé</div>
-      <p class="signal-desc">
-        A conversation show hosted with Audrey Aubut. 
-        Available on Apple Podcasts and Spotify.
-      </p>
-      <a href="https://open.spotify.com/show/0WhOxQ9CqIwVlxtMAYGHlp" class="signal-link" target="_blank" rel="noopener">Listen on Spotify →</a>
-    </div>
+        <div class="signal-item">
+          <div class="signal-platform">LinkedIn</div>
+          <p class="signal-desc">
+            Longer-form professional analysis. Public affairs,
+            communications strategy, and Canadian policy.
+            The work behind the work.
+          </p>
+          <a href="https://linkedin.com/in/kimleclerc" class="signal-link" target="_blank" rel="noopener">Connect on LinkedIn →</a>
+        </div>
 
-    <div class="signal-item">
-      <div class="signal-platform">YouTube</div>
-      <p class="signal-desc">
-        Video content on Canadian politics, public affairs, 
-        and strategic analysis.
-      </p>
-      <a href="https://www.youtube.com/@KimLeclercOriginal" class="signal-link" target="_blank" rel="noopener">Watch on YouTube →</a>
-    </div>
+        <div class="signal-item">
+          <div class="signal-platform">Project — Budget Analysis Tools</div>
+          <p class="signal-desc">
+            Independent budget analysis tools built and launched on budget day.
+            Because waiting for the commentary is not the same as doing the work yourself.
+          </p>
+          <div style="display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:0.5rem;">
+            <a href="https://kimleclerc.ca/budget_QC/" class="signal-link" target="_blank" rel="noopener">Québec →</a>
+            <a href="https://kimleclerc.ca/budget_ON/" class="signal-link" target="_blank" rel="noopener">Ontario →</a>
+            <a href="https://kimleclerc.ca/budget_CA/" class="signal-link" target="_blank" rel="noopener">Canada →</a>
+          </div>
+        </div>
 
-    <div class="signal-item">
-      <div class="signal-platform">Project — Budget Analysis Tools</div>
-      <p class="signal-desc">
-        Independent budget analysis tools built and launched on budget day.
-        Because waiting for the commentary is not the same as doing the work yourself.
-      </p>
-      <div style="display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:0.5rem;">
-        <a href="https://kimleclerc.ca/budget_QC/",
-  "https://kimleclerc.ca/budget_ON/",
-  "https://kimleclerc.ca/budget_CA/" class="signal-link" target="_blank" rel="noopener">Québec →</a>
-        <a href="https://kimleclerc.ca/budget_ON/" class="signal-link" target="_blank" rel="noopener">Ontario →</a>
-        <a href="https://kimleclerc.ca/budget_CA/" class="signal-link" target="_blank" rel="noopener">Canada →</a>
+        <div class="signal-item">
+          <div class="signal-platform">Media Appearances</div>
+          <p class="signal-desc">
+            Commentary on Canadian politics, federal policy, and strategic communications.
+            Available for interviews, panels, and expert analysis.
+          </p>
+          <a href="#contact" class="signal-link">Media inquiries →</a>
+        </div>
+
+        <div class="signal-item">
+          <div class="signal-platform">Archive — Medium</div>
+          <p class="signal-desc">
+            Earlier writing on public affairs, government relations,
+            and Canadian policy. Still indexed. Still relevant.
+          </p>
+          <a href="https://medium.com/@kimleclerc" class="signal-link" target="_blank" rel="noopener">Read the archive →</a>
+        </div>
+
+        <div class="signal-item">
+          <div class="signal-platform">Support the work</div>
+          <p class="signal-desc">
+            If you find the analysis useful, you can support
+            independent work directly.
+          </p>
+          <a href="https://buymeacoffee.com/kimleclerc" class="signal-link" target="_blank" rel="noopener">Buy me a coffee →</a>
+        </div>
+
       </div>
     </div>
-
-    <div class="signal-item">
-      <div class="signal-platform">Support the work</div>
-      <p class="signal-desc">
-        If you find the analysis useful, you can support 
-        independent work directly.
-      </p>
-      <a href="https://buymeacoffee.com/kimleclerc" class="signal-link" target="_blank" rel="noopener">Buy me a coffee →</a>
-    </div>
-
-  </div>
-</div>
-```
-
   </section>
 
   <!-- IN THE MEDIA -->
-
   <section id="media" style="padding-top: 7rem; padding-bottom: 7rem;">
     <div style="max-width: 1200px; margin: 0 auto;">
       <div class="section-label">In the Media</div>
       <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--rule); border: 1px solid var(--rule); margin-bottom: 4rem;">
 
-```
-    <div style="background: var(--paper); padding: 2.5rem 3rem;">
-      <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">SQPRP · Prix d'excellence · Or</div>
-      <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Community Advocacy — CCHADO</p>
-      <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Gold award in issues and crisis management for the Central Outaouais hospital campaign. AUCOIN Stratégie & Communication, 2024.</p>
+        <div style="background: var(--paper); padding: 2.5rem 3rem;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">SQPRP · Prix d'excellence · Or</div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Community Advocacy — CCHADO</p>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Gold award in issues and crisis management for the Central Outaouais hospital campaign. AUCOIN Stratégie &amp; Communication, 2024.</p>
+        </div>
+
+        <div style="background: var(--paper); padding: 2.5rem 3rem;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">La Presse · Janvier 2017</div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Hockey Canada &amp; Language Rights</p>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Proposed the minister invoke federal funding obligations to hold Hockey Canada accountable on French-language requirements — a governance precedent later applied across sports organizations.</p>
+        </div>
+
+        <div style="background: var(--paper); padding: 2.5rem 3rem;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">Strategic Advisory · 2022–2023</div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">FIFA World Cup 2026 — Montréal Bid</p>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Advised on Montréal's World Cup host city candidacy when conventional wisdom said the new administration wouldn't engage. Montréal joined the bid. Edmonton — the consensus pick — withdrew.</p>
+        </div>
+
+        <div style="background: var(--paper); padding: 2.5rem 3rem;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">Anadolu Agency · 2024</div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">F-35 Cost Overruns — Expert Analysis</p>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">Quoted as expert on why countries may seek alternatives to the F-35 amid rising costs and procurement uncertainty — including Canada's strategic calculus.</p>
+          <a href="https://www.aa.com.tr/en/americas/experts-believe-countries-could-seek-alternatives-amid-rising-costs-of-us-made-f-35-fighter-jets/3621045" target="_blank" rel="noopener" style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-light); padding-bottom: 1px;">Read the article →</a>
+        </div>
+
+        <div style="background: var(--paper); padding: 2.5rem 3rem;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">Projet · Analyse indépendante</div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Budget Québec — Analyse interactive</p>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">Independent analysis tool built around the Quebec provincial budget. Launched for the 2025–2026 and 2026–2027 budgets. Data-driven, publicly accessible, no editorial filter.</p>
+          <a href="https://kimleclerc.ca/budget_QC/" target="_blank" rel="noopener" style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-light); padding-bottom: 1px;">Explore the tool →</a>
+        </div>
+
+        <div style="background: var(--paper); padding: 2.5rem 3rem;">
+          <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">Media &amp; Commentary</div>
+          <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Available for Expert Analysis</p>
+          <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Commentary on Canadian federal politics, public affairs, defence policy, and strategic communications. Bilingual. Based in Ottawa.</p>
+        </div>
+
+      </div>
     </div>
-
-    <div style="background: var(--paper); padding: 2.5rem 3rem;">
-      <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">La Presse · Janvier 2017</div>
-      <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Hockey Canada &amp; Language Rights</p>
-      <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Proposed the minister invoke federal funding obligations to hold Hockey Canada accountable on French-language requirements — a governance precedent later applied across sports organizations.</p>
-    </div>
-
-    <div style="background: var(--paper); padding: 2.5rem 3rem;">
-      <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">Strategic Advisory · 2022–2023</div>
-      <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">FIFA World Cup 2026 — Montréal Bid</p>
-      <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Advised on Montréal's World Cup host city candidacy when conventional wisdom said the new administration wouldn't engage. Montréal joined the bid. Edmonton — the consensus pick — withdrew.</p>
-    </div>
-
-    <div style="background: var(--paper); padding: 2.5rem 3rem;">
-      <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">Anadolu Agency · 2024</div>
-      <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">F-35 Cost Overruns — Expert Analysis</p>
-      <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">Quoted as expert on why countries may seek alternatives to the F-35 amid rising costs and procurement uncertainty — including Canada's strategic calculus.</p>
-      <a href="https://www.aa.com.tr/en/americas/experts-believe-countries-could-seek-alternatives-amid-rising-costs-of-us-made-f-35-fighter-jets/3621045" target="_blank" rel="noopener" style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-light); padding-bottom: 1px;">Read the article →</a>
-    </div>
-
-    <div style="background: var(--paper); padding: 2.5rem 3rem;">
-      <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">Projet · Analyse indépendante</div>
-      <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Budget Québec — Analyse interactive</p>
-      <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6; margin-bottom: 1rem;">Independent analysis tool built around the Quebec provincial budget. Launched for the 2025–2026 and 2026–2027 budgets. Data-driven, publicly accessible, no editorial filter.</p>
-      <a href="https://kimleclerc.ca/budget_QC/",
-  "https://kimleclerc.ca/budget_ON/",
-  "https://kimleclerc.ca/budget_CA/" target="_blank" rel="noopener" style="font-family: 'DM Mono', monospace; font-size: 0.68rem; letter-spacing: 0.1em; color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-light); padding-bottom: 1px;">Explore the tool →</a>
-    </div>
-
-    <div style="background: var(--paper); padding: 2.5rem 3rem;">
-      <div style="font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--accent); margin-bottom: 0.6rem;">Media &amp; Commentary</div>
-      <p style="font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; line-height: 1.3;">Available for Expert Analysis</p>
-      <p style="font-size: 0.88rem; color: var(--muted); line-height: 1.6;">Commentary on Canadian federal politics, public affairs, defence policy, and strategic communications. Bilingual. Based in Ottawa.</p>
-    </div>
-
-  </div>
-</div>
-```
-
   </section>
 
   <!-- CONTACT -->
-
   <section id="contact">
     <div class="contact-section">
       <div class="section-label" style="justify-content: center;">Contact</div>
@@ -1084,22 +1068,28 @@
         let's talk.
       </h2>
       <p class="contact-body">
-        I work with organizations navigating complex policy environments, 
-        reputational challenges, and strategic uncertainty. 
+        I work with organizations navigating complex policy environments,
+        reputational challenges, and strategic uncertainty.
         I also take media inquiries and speaking engagements seriously.
       </p>
       <div style="display: flex; flex-direction: column; gap: 0.8rem; align-items: center;">
-        <a href="/cdn-cgi/l/email-protection#b7dcdedaf7dcdedadbd2d4dbd2c5d499d4d6" class="contact-email"><span class="__cf_email__" data-cfemail="42292b2f02292b2f2e27212e2730216c2123">[email&#160;protected]</span></a>
-        <a href="/cdn-cgi/l/email-protection#3952555c5a555c4b5a79584c5a5650574a4d4b584d5c5e505c175a5654" class="contact-email" style="font-size: 1rem; border-bottom-color: var(--rule);"><span class="__cf_email__" data-cfemail="1b70777e78777e69785b7a6e78747275686f697a6f7e7c727e35787476">[email&#160;protected]</span></a>
+        <a href="mailto:kim@kimleclerc.ca" class="contact-email">kim@kimleclerc.ca</a>
+        <a href="mailto:kleclerc@aucoinstrategie.com" class="contact-email" style="font-size: 1rem; border-bottom-color: var(--rule);">kleclerc@aucoinstrategie.com</a>
       </div>
     </div>
   </section>
 
   <!-- FOOTER -->
-
   <footer>
     <p class="footer-copy">&copy; 2026 Kim Leclerc. Ottawa, Ontario.</p>
     <div class="footer-links">
       <a href="https://linkedin.com/in/kimleclerc" target="_blank" rel="noopener">LinkedIn</a>
       <a href="https://twitter.com/kimleclerc" target="_blank" rel="noopener">X</a>
-      <a href="https://bsky.app/profile/kimleclerc.bsk
+      <a href="https://bsky.app/profile/kimleclerc.bsky.social" target="_blank" rel="noopener">Bluesky</a>
+      <a href="https://vote-scope.com" target="_blank" rel="noopener">Vote-Scope</a>
+      <a href="https://leclercswarroom.substack.com" target="_blank" rel="noopener">Substack</a>
+    </div>
+  </footer>
+
+</body>
+</html>
