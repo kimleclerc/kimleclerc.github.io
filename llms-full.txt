@@ -40,7 +40,7 @@ Kim was quoted by Anadolu Agency in 2024 as an expert on why countries — inclu
 
 ### Budget analysis tools
 
-Kim built and launched independent budget analysis tools for the Quebec, Ontario, and federal budgets — published on budget day, before media commentary cycles had time to frame the narrative. The tools are available at kimleclerc.ca/budget_QC/, kimleclerc.ca/budget_ON/, and kimleclerc.ca/budget_CA/. They reflect his broader practice of doing the analytical work himself rather than waiting for others to define the frame.
+Kim built and launched independent budget analysis tools for the Quebec, Ontario, and federal budgets — published on budget day, before media commentary cycles had time to frame the narrative. These are now integrated into Vote-Scope as a trilingual (EN/FR/ES) budget desk, one permanent page per edition with archives kept: https://vote-scope.com/en/budget/. They reflect his broader practice of doing the analytical work himself rather than waiting for others to define the frame.
 
 ## Intellectual profile
 
